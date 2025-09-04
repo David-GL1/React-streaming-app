@@ -1,0 +1,108 @@
+@use '../../../styles/mixins' as mix;
+
+.infoSong{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.infoSong__moreOptionsContainer{
+    display: flex;
+    gap: 15px;
+}
+
+.aboutSongContainer__songCoverContainer{
+    width: 95%;
+    height: 300px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutsongContainer__songCover{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+    border-radius: 12px;
+}
+
+
+.aboutSongContainer__infoContainer{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+
+.aboutSongContainer__infoContainer--shareAndFavorites{
+    display: flex;
+    gap: 20px;
+}
+
+
+.aboutArtitsContainer__imgArtistContainer{
+    width: 100%;
+    height: 200px;
+    position: relative;
+}
+
+.aboutArtitsContainer__imgArtistContainer--img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+}
+
+.aboutArtitsContainer__imgArtistContainer--textContainer {
+    position: absolute;
+    top: 10px;  
+    padding: 5px 10px;
+}
+
+
+.aboutArtitsContainer__dataArtist{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    padding: 0.6rem;
+    background-color: #2d3034;
+    border-radius: 0 0 12px 12px;
+}
+
+.aboutArtitsContainer__dataArtist--fansContainer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.aboutArtitsContainer__dataArtist--numberFansContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.aboutArtitsContainer__dataArtist--followBtn{
+    background: transparent;
+    color: #b3b3b3;
+    border: 2px solid #b3b3b3; 
+    border-radius: 50px;
+    padding: 8px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: scale(1.04);
+        color: #FFFFFF;         
+        border-color: #FFFFFF;  
+    }
+
+    @include mix.no-hover{
+        &:hover{
+            transition: none;
+            transform: none;
+        }
+    }
+}
+
+

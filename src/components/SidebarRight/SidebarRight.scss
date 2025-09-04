@@ -1,0 +1,14 @@
+@use '../../styles/mixins' as mix;
+
+.sidebarRight{
+    width: 30%;
+    @extend %stylesColumns;
+
+    @include mix.phones{
+        display: none;
+    }
+
+    @include mix.tablets{
+        width: 35%;
+    }
+}

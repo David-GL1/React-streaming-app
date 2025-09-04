@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import Header from './components/Header';
+import MainContent from './components/Maincontent';
+import SidebarLeft from './components/SidebarLeft';
+import SidebarRight from './components/SidebarRight';
+import PlayerBar from './components/PlayerBar';
+import './App.scss';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+class App extends Component {
+
+  componentDidMount(){
+    console.log("La aplicacion se ha cargado correctamente")
+  }
+
+  render() { 
+    return(  
+    <div className="layout">
+      <Header />
+
+      {/* Cuerpo dividido en 3 columnas */}
+      <div className="app-body">
+        <SidebarLeft />
+        <MainContent />
+        <SidebarRight />
+      </div>
+
+      <PlayerBar/>
     </div>
-  );
+    )
+  };
 }
 
 export default App;
