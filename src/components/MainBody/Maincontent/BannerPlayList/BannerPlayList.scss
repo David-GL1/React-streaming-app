@@ -1,0 +1,87 @@
+@use "../../../../styles/mixins" as mix;
+
+.main__banner {
+  width: 100%;
+  padding: 1.8rem 1.5rem;
+  display: flex;
+  gap: 18px;
+  border-radius: 12px 12px 0 0;
+  background: linear-gradient(
+    to top,
+    #2e0aa8 0%,
+    #3a15c6 25%,
+    #4c29d4 50%,
+    #5d40e0 70%,
+    #7257eb 85%,
+    #8a73f0 100%
+  );
+
+  @include mix.phones {
+    border-radius: 0;
+    flex-direction: column;
+    padding: 1rem;
+    align-items: center;
+  }
+}
+
+.main__banner--playlistImgContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  height: 140px;
+  border-radius: 12px;
+  z-index: 100;
+  background: linear-gradient(
+    145deg,
+    #490ff1 0%,
+    #5724e4 15%,
+    #6a53e6 28%,
+    #7a7ed7 40%,
+    #8d8fda 55%,
+    #9aabd0 68%,
+    #a8bfcd 78%,
+    #b2d4c5 88%,
+    #b8ddcc 100%
+  );
+  box-shadow: 0 30px 60px rgba(74, 0, 255, 0.25),
+    0 12px 24px rgba(106, 61, 230, 0.2);
+
+  @include mix.phones {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+.favoritesIcon {
+  font-size: 40px;
+  fill: #ffffff;
+}
+
+.main__banner--playlistInfoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main__banner--playlistTtile {
+  @include mix.phones {
+    display: none;
+  }
+}
+
+.main__banner--playlistName {
+  @include mix.phones {
+    font-size: 1.8rem;
+  }
+}
+
+.main__banner--playlistInfoUserContainer {
+  @include mix.phones {
+    text-align: center; 
+  }
+}
+
+
+
+

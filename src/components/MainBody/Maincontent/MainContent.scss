@@ -1,100 +1,7 @@
-@use '../../styles/mixins' as mix;
-
-.main{
-    width: 40%;
-    border-radius: 0;
-    gap: 0;
-    padding: 0;
-    @extend %stylesColumns;
-
-    @include mix.phones{
-        width: 100%;  
-    }
-
-    @include mix.tablets{
-        width: 50%;
-    }   
-}
-
-.main__banner{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 18px;
-    padding: 2rem;
-    border-radius: 12px 12px 0 0;
-    background: linear-gradient(
-        to top,
-        #2e0aa8 0%,      
-        #3a15c6 25%,     
-        #4c29d4 50%,      
-        #5d40e0 70%,      
-        #7257eb 85%,     
-        #8a73f0 100%     
-    );
-
-    @include mix.phones{
-        border-radius: 0;
-        flex-direction: column;
-        padding: 1rem;
-    }
-}
-
-.main__banner--playlistImgContainer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 170px;
-    height: 130px;
-    border-radius: 10px;
-    z-index: 100;
-    background: linear-gradient(
-        145deg,      
-        #490ff1 0%,     
-        #5724e4 15%,     
-        #6a53e6 28%,     
-        #7a7ed7 40%,     
-        #8d8fda 55%,     
-        #9aabd0 68%,    
-        #a8bfcd 78%,     
-        #b2d4c5 88%,     
-        #b8ddcc 100%    
-);
-    box-shadow: 
-        0 30px 60px rgba(74, 0, 255, 0.25),  
-        0 12px 24px rgba(106, 61, 230, 0.2);
-
-    @include mix.phones{
-        width: 160px;
-        height: 160px;
-    }
-}
-
-.favoritesIcon{
-    font-size: 40px;
-    fill: #FFFFFF;
-}
-
-.main__banner--playlistInfoContainer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.main__banner--playlistTtile{
-    @include mix.phones{
-        display: none;
-    }
-}
-
-.main__banner--playlistName{
-    @include mix.phones{
-        font-size: 1.8rem;
-    }
-}
+@use '../../../styles/mixins' as mix;
 
 .backgroundContinuationBanner {
-  height: 80%;
+  height: 100%;
   background: linear-gradient(
     to bottom,
     rgba(50, 13, 177, 0.8) 0%,
@@ -111,7 +18,7 @@
 .main__audioContainer{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     padding: 1rem 0.8rem;
 }
 
@@ -152,7 +59,6 @@
     }
   }
 }
-
 
 .main__audioContainer--searchFilterContainer{
     display: flex;
@@ -199,7 +105,6 @@
   display: grid;
   grid-template-columns:  0.2fr 1.5fr 1fr 0.5fr;
   position: relative;
-  margin-bottom: 10px;
   padding: 0.4rem;
 
   p {
@@ -227,9 +132,12 @@
 .divider{
     width: 95%;
     display: block;
-    margin: 0.6rem auto;
+    margin: 0.3rem auto;
     color: #999;      
-    
+
+    &.twoColumns{
+        width: 97%;
+    }
     
     @include mix.phones{
         display: none;
@@ -240,3 +148,15 @@
     }
 }
 
+.main__noSongsMessage{
+    display: flex;
+    flex-direction: column;
+}
+
+.main__playlistSongsContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 4px;
+    padding: 0.3rem;
+}

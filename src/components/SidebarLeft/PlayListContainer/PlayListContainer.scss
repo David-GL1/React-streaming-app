@@ -1,0 +1,58 @@
+@use '../../../styles/mixins' as mix;
+
+.asideLeft__playListContainer{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+
+    &:hover {
+        transform: scale(1.03);
+    }
+
+    @include mix.tablets{
+        height: 75px;
+    }
+
+    @include mix.no-hover{
+        &:hover{
+            transform: none;
+            transition: none;
+        }
+    }
+}
+
+.asideLeft__playListContainer--imgContainer{
+    width: 100%;
+    height: 100%;
+}
+
+.asideLeft__playListContainer--imgPlayList{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border-radius: 12px;
+}
+
+.asideLeft__playListContainer--playListInfo{
+    width: 90%;
+    height: 100%;
+
+    @include mix.tablets{
+        display: none;
+    }
+}
+
+.asideLeft__playListContainer--titlePlayList{
+    font-size: 1rem;
+}
+
+.asideLeft__playListContainer--descriptionPlayList{
+    font-size: 0.9rem;
+}
+
+

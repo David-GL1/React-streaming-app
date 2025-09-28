@@ -4,7 +4,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 15px;
 }
 
 .infoSong__moreOptionsContainer{
@@ -32,11 +31,12 @@
 .aboutSongContainer__infoContainer{
     display: flex;
     justify-content: space-between;
-    margin: 15px 0;
+    margin: 15px 0 0 0;
 }
 
 .aboutSongContainer__infoContainer--shareAndFavorites{
     display: flex;
+    align-items: center;
     gap: 20px;
 }
 
@@ -104,5 +104,17 @@
         }
     }
 }
+
+.aboutArtitsContainer__dataArtist--text {
+    display: -webkit-box;       
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;      
+    overflow: hidden;            
+    text-overflow: ellipsis;     
+    white-space: normal;       
+    text-align: justify;         
+}
+
+
 
 

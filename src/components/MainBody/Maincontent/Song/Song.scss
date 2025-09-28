@@ -1,0 +1,201 @@
+@use "../../../../styles/mixins" as mix;
+
+.main__songContainer {
+  display: grid;
+  grid-template-columns: 0.2fr 1.5fr 1fr 0.5fr;
+  position: relative;
+  padding: 0.4rem;
+  align-items: center;
+  transition: background-color 0.3s ease;
+  border-radius: 12px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+
+    .main__songContainer--numberSong {
+      display: none;
+    }
+
+    .main__songContainer--iconPlay {
+      display: inline;
+    }
+
+    .addToFavorites {
+      visibility: visible;
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+
+  @include mix.no-hover {
+    &:hover {
+      transition: none;
+      background-color: transparent;
+
+      .main__songContainer--iconPlay {
+        display: none;
+      }
+
+      .main__songContainer--numberSong {
+        display: none;
+      }
+    }
+  }
+
+  @include mix.phones {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include mix.tablets {
+    grid-template-columns: 0.2fr 0.8fr 0.8fr 0.4fr;
+    padding: 0;
+  }
+}
+
+.main__songContainer--iconPlay {
+  display: none;
+  font-size: 20px;
+}
+
+.main__songContainer--songNumberContainer {
+  @include mix.phones {
+    display: none;
+  }
+
+  @include mix.tablets {
+    justify-self: center;
+  }
+}
+
+.main__songContainer--aboutSongContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  @include mix.phones {
+    gap: 18px;
+  }
+}
+
+.main__songContainer--songImgContainer {
+  display: flex;
+  align-items: center;
+}
+
+.main__songContainer--imgSong {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  object-fit: contain;
+  border-radius: 4px;
+
+  @include mix.phones {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+.main__songContainer--albumNameContainer {
+  min-width: 0;
+  overflow: hidden;
+
+  @include mix.phones {
+    display: none;
+  }
+
+  @include mix.tablets {
+    justify-self: center;
+  }
+}
+
+.main__songContainer--durationContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  @include mix.phones {
+    justify-content: flex-end;
+  }
+
+  @include mix.tablets{
+    justify-content: space-evenly;
+  }
+}
+
+.addToFavorites {
+  font-size: 27px;
+  position: absolute;
+  left: -10px;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.2s ease, color 0.2s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &.favorite {
+    color: #1ed760;
+  }
+
+  @include mix.no-hover{
+    &:hover{
+      transform: none;
+      transition: none;
+    }
+  }
+
+  @include mix.phones {
+    visibility: visible;
+    opacity: 1;
+    position: static;
+  }
+
+  @include mix.tablets{
+    visibility: visible;
+    opacity: 1;
+    position: static;
+  }
+}
+
+.main__songContainer--songDuration {
+  margin: 0 auto;
+
+  @include mix.phones {
+    display: none;
+  }
+
+  @include mix.tablets{
+    margin:  0
+  }
+}
+
+.main__songContainer--albumName {
+  @extend %textTruncate;
+  width: 160px;
+
+  &.twoColumns {
+    width: 300px;
+  }
+
+  @include mix.tablets{
+    width: 120px
+  }
+}
+
+.main__songContainer--titleSong,
+.main__songContainer--artist {
+  @extend %textTruncate;
+  width: 200px;
+
+  &.twoColumns {
+    width: 350px;
+  }
+
+  @include mix.tablets{
+    width: 160px;
+  }
+}

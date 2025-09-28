@@ -1,0 +1,19 @@
+@use '../../styles/mixins' as mix;
+
+.messageContainer{
+    padding: 3rem;
+}
+
+.messageContainer__iconContainer,
+.messageContainer__descritionContainer--title{
+    margin-bottom: 8px;
+}
+
+.messageContainer__iconContainer--icon{
+    font-size: 40px;
+}
+
+.messageContainer__iconContainer,
+.messageContainer__descritionContainer{
+   text-align: center;
+}

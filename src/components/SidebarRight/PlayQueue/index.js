@@ -1,108 +1,60 @@
 import React from "react";
-import { FiX // ❌  
-} from 'react-icons/fi';
-import './PlayQueue.scss';
+import {
+  FiX, // ❌
+} from "react-icons/fi";
+import "./PlayQueue.scss";
+import QueueSong from "./QueueSong";
 
 const PlayQueue = () => {
-    return (
-        <aside>
-            <section className="playQueue">
-                <article className="playQueue__queueAndHistoryContainer">
-                    <p className="playQueue__queueAndHistoryContainer--playQueue">Fila de reproduccion</p>
-                    <p className="playQueue__queueAndHistoryContainer--playBackHistory">Escuchado recientemente</p>
-                    <FiX  className="icon"/>
-                </article>
+  return (
+    <aside>
+      <section className="playQueue">
+        <article className="playQueue__queueAndHistoryContainer">
+          <p className="playQueue__queueAndHistoryContainer--playQueue">
+            Fila de reproduccion
+          </p>
+          <p className="playQueue__queueAndHistoryContainer--playBackHistory">
+            Escuchado recientemente
+          </p>
+          <FiX className="icon" />
+        </article>
 
-                <p className="playQueue__infoText">Estas reproduciendo</p>
+        <p className="playQueue__infoText">Estas reproduciendo</p>
 
-                <article className="playQueue__songContainer">
-                    <div className="playQueue__songContainer--aboutSongContainer">
-                        <div className="playQueue__songContainer--songImgContainer">   
-                            <img className="playQueue__songContainer--imgSong"></img>
-                        </div>
-                       <div className="playQueue__songContainer--textContainer">
-                            <h3 className="playQueue__songContainer--titleSong">Titulo de la cancion</h3>
-                            <p className="playQueue__songContainer--artist">Artistas</p>
-                        </div>
-                    </div>
-                </article>
-                
-                <p  className="playQueue__infoText">Siguiente de tu Playlist</p>
+        <QueueSong
+          imgAlbum="https://i.scdn.co/image/ab67616d0000b273ba5db46f4b838ef6027e6f96"
+          titleSong="Shape of you"
+          artists="Ed Sheeran"
+        />
 
-                 <article className="playQueue__songContainer">
-                    <div className="playQueue__songContainer--aboutSongContainer">
-                        <div className="playQueue__songContainer--songImgContainer">   
-                            <img className="playQueue__songContainer--imgSong"></img>
-                        </div>
-                       <div className="playQueue__songContainer--textContainer">
-                            <h3 className="playQueue__songContainer--titleSong">Titulo de la cancion</h3>
-                            <p className="playQueue__songContainer--artist">Artistas</p>
-                        </div>
-                    </div>
-                </article>
+        <p className="playQueue__infoText">Siguiente de tu Playlist</p>
 
-                 <article className="playQueue__songContainer">
-                    <div className="playQueue__songContainer--aboutSongContainer">
-                        <div className="playQueue__songContainer--songImgContainer">   
-                            <img className="playQueue__songContainer--imgSong"></img>
-                        </div>
-                       <div className="playQueue__songContainer--textContainer">
-                            <h3 className="playQueue__songContainer--titleSong">Titulo de la cancion</h3>
-                            <p className="playQueue__songContainer--artist">Artistas</p>
-                        </div>
-                    </div>
-                </article>
+        <QueueSong
+          imgAlbum="https://i.scdn.co/image/ab67616d0000b273ba5db46f4b838ef6027e6f96"
+          titleSong="Shape of you"
+          artists="Ed Sheeran"
+        />
 
-                 <article className="playQueue__songContainer">
-                    <div className="playQueue__songContainer--aboutSongContainer">
-                        <div className="playQueue__songContainer--songImgContainer">   
-                            <img className="playQueue__songContainer--imgSong"></img>
-                        </div>
-                       <div className="playQueue__songContainer--textContainer">
-                            <h3 className="playQueue__songContainer--titleSong">Titulo de la cancion</h3>
-                            <p className="playQueue__songContainer--artist">Artistas</p>
-                        </div>
-                    </div>
-                </article>
+        <QueueSong
+          imgAlbum="https://i.scdn.co/image/ab67616d0000b273ba5db46f4b838ef6027e6f96"
+          titleSong="Shape of you"
+          artists="Ed Sheeran"
+        />
 
-                 <article className="playQueue__songContainer">
-                    <div className="playQueue__songContainer--aboutSongContainer">
-                        <div className="playQueue__songContainer--songImgContainer">   
-                            <img className="playQueue__songContainer--imgSong"></img>
-                        </div>
-                       <div className="playQueue__songContainer--textContainer">
-                            <h3 className="playQueue__songContainer--titleSong">Titulo de la cancion</h3>
-                            <p className="playQueue__songContainer--artist">Artistas</p>
-                        </div>
-                    </div>
-                </article>
+        <QueueSong
+          imgAlbum="https://i.scdn.co/image/ab67616d0000b273ba5db46f4b838ef6027e6f96"
+          titleSong="Shape of you"
+          artists="Ed Sheeran"
+        />
 
-                 <article className="playQueue__songContainer">
-                    <div className="playQueue__songContainer--aboutSongContainer">
-                        <div className="playQueue__songContainer--songImgContainer">   
-                            <img className="playQueue__songContainer--imgSong"></img>
-                        </div>
-                       <div className="playQueue__songContainer--textContainer">
-                            <h3 className="playQueue__songContainer--titleSong">Titulo de la cancion</h3>
-                            <p className="playQueue__songContainer--artist">Artistas</p>
-                        </div>
-                    </div>
-                </article>
+        <QueueSong
+          imgAlbum="https://i.scdn.co/image/ab67616d0000b273ba5db46f4b838ef6027e6f96"
+          titleSong="Shape of you"
+          artists="Ed Sheeran"
+        />
+      </section>
+    </aside>
+  );
+};
 
-                 <article className="playQueue__songContainer">
-                    <div className="playQueue__songContainer--aboutSongContainer">
-                        <div className="playQueue__songContainer--songImgContainer">   
-                            <img className="playQueue__songContainer--imgSong"></img>
-                        </div>
-                       <div className="playQueue__songContainer--textContainer">
-                            <h3 className="playQueue__songContainer--titleSong">Titulo de la cancion</h3>
-                            <p className="playQueue__songContainer--artist">Artistas</p>
-                        </div>
-                    </div>
-                </article>
-            </section>
-        </aside>
-    )
-}
-
-export default PlayQueue
+export default PlayQueue;

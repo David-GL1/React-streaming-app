@@ -1,8 +1,9 @@
 @use '../../styles/mixins' as mix;
 
 .asideLeft {
-    width: 30%;
+    width: 12%;
     @extend %stylesColumns;
+    padding: 0.4rem;
 
     @include mix.phones{
         display: none;
@@ -19,7 +20,8 @@
     display: flex;
     align-items: center;
     gap: 25px;
-    padding: 0.5rem;
+    padding: 0.5rem 0 0 0.6rem;
+    margin-bottom: 5px;
 
     @include mix.tablets{
         justify-content: center;
@@ -28,53 +30,11 @@
 
 .asideLeft__songsGrid{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-    grid-auto-rows: minmax(165px, auto); 
-    gap: 12px;
+    grid-template-columns: 1fr;
+    gap: 20px;
 
     @include mix.tablets{
-        grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
         grid-auto-rows: minmax(80px, auto);
     }
 }
-
-.asideLeft__playListContainer{
-    width: 100%;
-    height: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    @include mix.tablets{
-        height: 75px;
-    }
-}
-
-.asideLeft__playListContainer--imgContainer{
-    width: 90%;
-    height: 100%;
-}
-
-.asideLeft__playListContainer--imgPlayList{
-    width: 100%;
-    height: 100%;
-}
-
-.asideLeft__playListContainer--playListInfo{
-    width: 90%;
-    height: 100%;
-
-    @include mix.tablets{
-        display: none;
-    }
-}
-
-.asideLeft__playListContainer--titlePlayList{
-    font-size: 1rem;
-}
-
-.asideLeft__playListContainer--descriptionPlayList{
-    font-size: 0.9rem;
-}
-
 

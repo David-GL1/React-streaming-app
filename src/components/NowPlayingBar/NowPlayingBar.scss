@@ -1,0 +1,20 @@
+@use '../../styles/mixins' as mix;
+
+.nowPLayingBar{
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+}
+
+.nowPLayingBar__containerImg{
+  display: flex;
+}
+
+.nowPLayingBar__containerImg--img{
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 4px;
+}

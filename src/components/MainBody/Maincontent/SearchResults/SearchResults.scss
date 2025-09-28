@@ -1,0 +1,15 @@
+@use '../../../../styles/mixins' as mix;
+
+
+.searchResultsMainContainer{
+    padding: 0.6rem;
+
+    @include mix.phones{
+        padding: 1rem;
+    }
+}
+
+.searchResultsMainContainer__title{
+    margin: 12px 0 20px 0;
+}
+

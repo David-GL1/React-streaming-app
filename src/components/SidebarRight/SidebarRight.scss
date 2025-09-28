@@ -1,8 +1,14 @@
 @use '../../styles/mixins' as mix;
 
 .sidebarRight{
-    width: 30%;
+    width: 32%;
     @extend %stylesColumns;
+    gap: 15px;
+
+    &.inactive{
+        display: none;
+        pointer-events: none;
+    }
 
     @include mix.phones{
         display: none;
@@ -12,3 +18,4 @@
         width: 35%;
     }
 }
+

@@ -22,25 +22,6 @@
   }
 }
 
-.playerBar__mainContainerInfoSong{
-  width: 25%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 15px;
-}
-
-.playerBar__mainContainerInfoSong--containerImg{
-  display: flex;
-}
-
-.playerBar__mainContainerInfoSong--img{
-  width: 40px;
-  height: 40px;
-  object-fit: cover;
-  border-radius: 4px;
-}
-
 .playerBar__playerControlsContainer{
   width: 50%;
   display: flex;

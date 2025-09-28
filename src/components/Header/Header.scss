@@ -1,89 +1,74 @@
-@use '../../styles/mixins' as mix;
+@use "../../styles/mixins" as mix;
 
-.icon{
-    @extend %icon-hover-effect;
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem;
+  z-index: 100;
 }
 
-.header{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 0.8rem;
-    z-index: 100;
+.header__leftSection {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
-.header__leftSection{
-    width: 30%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+.logo {
+  font-size: 40px;
+  cursor: pointer;
+
+  @include mix.phones {
+    font-size: 30px;
+  }
 }
 
-.logo{
-    font-size: 40px;
-    cursor: pointer;
-
-      @include mix.phones{
-        font-size: 30px;
-    }
+.header__leftSection--logoContainer {
+  display: flex;
 }
 
-.header__leftSection--logoContainer{
-    display: flex;
+.mainIcon {
+  font-size: 36.8px;
 }
 
-.mainIcon{
-    font-size: 36.8px;
+.header__centerSection {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include mix.phones {
+    display: none;
+  }
+
+  @include mix.tablets{
+    display: none
+  }
 }
 
-.header__centerSection{
-    width: 30%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    @include mix.phones{
-        display: none;
-    }
+.header__centerSection--homeContainer {
+  @include mix.circleIconContainer("homeIcon");
 }
 
-.header__centerSection--homeContainer{
-    @include mix.circleIconContainer("homeIcon");
-}
-
-.header__centerSection--searchContainer{
-    width: 100%;
-    display: flex;
-    background-color: #2d2d2d;
-    border-radius: 50px;
-    padding: 0.4rem 1rem;
-    gap: 0.5rem;
-    box-shadow: inset 0 1px 3px rgba(255, 255, 255, 0.05),
-              0 2px 6px rgba(0, 0, 0, 0.3);
+.header__centerSection--searchContainer {
+  width: 100%;
+  @extend %searchContainer;
 }
 
 .header__centerSection--searchInput {
-    flex: 1;
-    background: transparent;
-    border: none;
-    outline: none;
-    color: #fff;
-    font-size: 1rem;
-
-    &::placeholder {
-      color: #888;
-    }
+  flex: 1;
+  @extend %searchInput;
 }
 
-.header__rightSection--userContainer{
-    width: 30%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 32px;
+.header__rightSection--userContainer {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 32px;
 
-    @include mix.phones{
-        width: 45%;
-        
-    }
+  @include mix.phones {
+    width: 45%;
+  }
 }
