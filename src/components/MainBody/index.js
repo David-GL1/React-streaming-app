@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import MainContent from "./Maincontent";
 import SearchResults from "./Maincontent/SearchResults";
 import "./MainBody.scss";
@@ -24,6 +24,10 @@ const MainBody = ({
       }
     });
   };
+
+  useEffect(()=> {
+    console.log("Se ha agrego o elimino una cancion de la lista de favoritos del usuario")
+  }, [favorites])
 
   return (
     <main className={`main ${className}`}>
